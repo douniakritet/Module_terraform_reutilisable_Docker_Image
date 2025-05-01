@@ -7,6 +7,9 @@ terraform {
   }
 }
 
+provider "docker" {
+   host = "tcp://localhost:2375"  
+}
 
 resource "docker_image" "mon_image" {
   name = var.image_name
