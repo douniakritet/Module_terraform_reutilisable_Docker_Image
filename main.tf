@@ -7,8 +7,6 @@ terraform {
   }
 }
 
-provider "docker" {
-}
 
 resource "docker_image" "mon_image" {
   name = var.image_name
