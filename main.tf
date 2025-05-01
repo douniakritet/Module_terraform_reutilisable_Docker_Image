@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "docker" {
-   host = "tcp://localhost:2375"  
+  host = "unix:///var/run/docker.sock"
 }
 
 resource "docker_image" "mon_image" {
