@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "docker" {
-    host = "tcp://localhost:2375"
+  # host = "tcp://localhost:2375"  ← Cette ligne doit être commentée ou supprimée
 }
 
 resource "docker_image" "mon_image" {
@@ -17,7 +17,6 @@ resource "docker_image" "mon_image" {
   build {
     context    = path.module
     dockerfile = "./Dockerfile"
-
   }
 }
 
